@@ -1,7 +1,7 @@
 {
-  "name": "westtt-cms-ms",
+  "name": "westtt-website",
   "version": "1.0.0",
-  "description": "A blank template to get started with Payload 3.0",
+  "description": "Website for Westtt",
   "license": "MIT",
   "type": "module",
   "scripts": {
