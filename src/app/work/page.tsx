@@ -17,7 +17,7 @@ function ProjectCard({project}: {project: any}) {
   return (
     <div className='flex flex-col gap-2'>
       <Image
-        src={project.thumbnail.url}
+        src={`${process.env.NEXT_PUBLIC_URL}${project.thumbnail.url}`}
         alt={project.title}
         height={project.thumbnail.height}
         width={project.thumbnail.width}
