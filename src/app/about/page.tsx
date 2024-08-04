@@ -1,6 +1,6 @@
 export default function About() {
     return (
-      <main className="">
+      <main>
         <h1>About</h1>
         <div className="max-w-xl flex flex-col gap-2">
             <p>Westtt is a Los Angeles-based branding and design studio working with great people, companies, and brands in music and tech. We want to work with people that care about their craft; you bring your passion and we&apos;ll bring ours.</p>

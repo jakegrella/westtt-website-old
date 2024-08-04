@@ -7,7 +7,7 @@ export default function Header() {
             <Link href="/"><Image src='/logo-white.svg' alt="Westtt" width={24} height={24} /></Link>
             <nav>
                 <ul className="flex gap-4">
-                    {/* <li><Link href="/work">Work</Link></li> */}
+                    <li><Link href="/work">Work</Link></li>
                     <li><Link href="/about">About</Link></li>
                 </ul>
             </nav>
