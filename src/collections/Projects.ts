@@ -24,16 +24,14 @@ export const Projects: CollectionConfig = {
             relationTo: 'media',
             required: true,
         },
-        // {
-        //     name: 'tags',
-        //     type: 'relationship',
-        //     relationTo: 'tags',
-        // }
+        {
+            name: 'tags',
+            type: 'relationship',
+            relationTo: 'tags',
+            hasMany: true,
+        }
     ]
 }
 
-// fish farm samples 
-// bryan allen lamb
-// stay over
 // work after work (branding)?
 // westtt (branding) ?
