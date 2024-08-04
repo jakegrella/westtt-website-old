@@ -17,7 +17,7 @@ function ProjectCard({project}: {project: any}) {
   return (
     <div className='flex flex-col gap-2'>
       <Image
-        src={`https://westtt.com/${project.thumbnail.url}`}
+        src={`https://westtt.com${project.thumbnail.url}`}
         alt={project.title}
         height={project.thumbnail.height}
         width={project.thumbnail.width}
