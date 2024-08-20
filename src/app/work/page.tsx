@@ -13,7 +13,7 @@ function TagBadge({ tag }: { tag: Tag }) {
   )
 }
 
-function ProjectCard({ project }: { project: any }) {
+export function ProjectCard({ project }: { project: any }) {
   return (
     <div className='flex flex-col justify-between gap-2 h-[80vh] tall:h-[50vh] max-h-[40rem]'>
       <Image
