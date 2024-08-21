@@ -2,17 +2,13 @@ import { getPayloadHMR } from '@payloadcms/next/utilities'
 import config from '@payload-config'
 import { Project } from "@/payload-types";
 import Image from "next/image";
-import { ProjectCard } from './work/page';
 import Link from 'next/link';
+import { Card, ProjectCard } from './components/Card';
 
 const payload = await getPayloadHMR({ config })
 
 type CardProps = {
   imageSource: string, imageAlt: string, title: string, subtitle: string, description: string[], type?: "primary" | "secondary"
-}
-
-export function Card({ children, type = "primary" }: { children: React.ReactNode, type?: "primary" | "secondary" }) {
-  return <div className={`flex flex-col h-full p-4 rounded-2xl ${type === 'primary' ? "bg-gray-800" : 'bg-gray-50 text-gray-800'}`}>{children}</div>
 }
 
 function ServicesCard({ imageSource, imageAlt, title, subtitle, description, type = "primary" }: CardProps) {
