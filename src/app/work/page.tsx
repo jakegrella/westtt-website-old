@@ -15,7 +15,8 @@ function TagBadge({ tag }: { tag: Tag }) {
 
 export function ProjectCard({ project }: { project: any }) {
   return (
-    <div className='flex flex-col justify-between gap-2 h-[80vh] tall:h-[50vh] max-h-[40rem]'>
+    // <div className='flex flex-col justify-between gap-2 shrink-0 h-[80vh] tall:h-[50vh] max-h-[40rem] max-w-[45%]'>
+    <div className='flex flex-col justify-between gap-2 shrink-0 max-h-[40rem] max-w-[45%]'>
       <Image
         src={`${process.env.NEXT_PUBLIC_URL}${project.thumbnail.url}`}
         alt={project.title}
