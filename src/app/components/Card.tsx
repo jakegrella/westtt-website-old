@@ -2,7 +2,7 @@ import { Tag } from "@/payload-types"
 import Image from "next/image"
 
 export function Card({ children, type = "primary" }: { children: React.ReactNode, type?: "primary" | "secondary" }) {
-    return <div className={`flex flex-col h-full p-4 rounded-2xl ${type === 'primary' ? "bg-gray-800" : 'bg-gray-50 text-gray-800'}`}>{children}</div>
+    return <div className={`flex flex-col h-full px-4 py-2 rounded-2xl ${type === 'primary' ? "bg-card-blue-10" : 'bg-gray-50 text-gray-800'}`}>{children}</div>
 }
 
 function TagBadge({ tag }: { tag: Tag }) {
@@ -25,7 +25,7 @@ export function ProjectCard({ project }: { project: any }) {
                 className='object-cover grow'
             />
             <div>
-                <h2>{project.title}</h2>
+                <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 {project.tags.length &&
                     <div className='flex gap-2 my-4'>

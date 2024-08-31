@@ -7,7 +7,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: '#000000'
+        background: '#11131F',
+        secondary: '#FF6F61',
+        'indigo-1': '#11131F',
+        'indigo-3': '#182449',
+      },
+      backgroundColor: {
+        'card-blue-10': 'rgba(214, 225, 255, 0.1)',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
