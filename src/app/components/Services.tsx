@@ -13,17 +13,17 @@ export function TagBadge({ tag, className = '' }: { tag: Tag, className?: string
 
 type CardProps = { title: string, subtitle: string, description: string[], type?: "primary" | "secondary" }
 
-export function ServiceCard({ title, subtitle, description, type = "primary", className = '' }: CardProps & { className?: string }) {
+export function ServiceCard({ title, subtitle, description, type = "primary", className = "" }: CardProps & { className?: string }) {
     return (
-      <div className={`w-11/12 tall:md:w-1/3 h-full px-2 py-1 flex flex-col justify-between shrink-0 rounded-lg
-      tall:w-auto tall:shrink
-      tall:md:min-h-72
-      ${type === 'primary' ? "bg-card-blue-10" : 'bg-gray-50 text-gray-800'}
+      // tall:w-auto tall:shrink
+      <div className={`w-11/12 h-full px-2 py-1 flex flex-col justify-between shrink-0 rounded-lg
+      tall:md:w-1/3 tall:md:min-h-72
+      ${type === "primary" ? "bg-card-blue-10" : "bg-gray-50 text-gray-800"}
       ${className}
       `}>
         <h3>{title}</h3>
         <div>
-          <h4 className='pb-2'>{subtitle}</h4>
+          <h4 className="pb-2">{subtitle}</h4>
           {description.length > 1
             ? <ul>{description.map(i => <li key={i}>— {i}</li>)}</ul>
             : <p>{description[0]}</p>
@@ -61,10 +61,10 @@ export default function Services() {
     };
 
     return (
-        <section className='flex flex-col w-full h-1/2 tall:h-auto'>
+        <section className='flex flex-col w-full h-1/2'>
             <div className='flex justify-between items-center gap-4'>
                 <h2 className="mt-4 md:mt-8">Services</h2>
-                <div className='flex gap-2 tall:hidden'>
+                <div className='flex gap-2 tall:md:hidden'>
                     {services.map((service, index) => (
                         <button
                             key={index}
@@ -75,12 +75,12 @@ export default function Services() {
                     ))}
                 </div>
             </div>
-            <div className='w-full grow flex gap-2 md:gap-4 tall:flex-col tall:md:flex-row overflow-x-hidden tall:overflow-x-auto'>
+            <div className='w-full grow flex gap-2 md:gap-4 tall:md:flex-row overflow-x-hidden tall:md:overflow-x-auto'>
                 {services.map((service, index) => (
                     <ServiceCard
                         key={index}
                         {...service}
-                        className={`service-card ${index === focusedService ? 'border-2 border-blue-500 tall:border-0' : ''}`}
+                        className={`service-card ${index === focusedService ? 'border-2 border-blue-500 tall:md:border-0' : ''}`}
                     />
                 ))}
             </div>
