@@ -24,7 +24,7 @@ const config: Config = {
       },
       screens: {
         'tall': {
-          'raw': '(min-height: 800px)'
+          'raw': '(min-height: 600px)'
         },
       }
     },
