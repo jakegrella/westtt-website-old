@@ -9,8 +9,10 @@ const config: Config = {
       colors: {
         background: '#11131F',
         secondary: '#FF6F61',
+        foreground: '#FEFCFB',
         'indigo-1': '#11131F',
         'indigo-3': '#182449',
+        'indigo-5': '#253974',
       },
       backgroundColor: {
         'card-blue-10': 'rgba(214, 225, 255, 0.1)',
@@ -23,7 +25,7 @@ const config: Config = {
       screens: {
         'tall': {
           'raw': '(min-height: 800px)'
-        }
+        },
       }
     },
   },

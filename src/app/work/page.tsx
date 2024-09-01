@@ -1,7 +1,6 @@
 import { getPayloadHMR } from '@payloadcms/next/utilities'
 import config from '@payload-config'
 import { Project } from '@/payload-types';
-import { ProjectCard } from '../components/Card';
 
 const payload = await getPayloadHMR({ config })
 
@@ -14,9 +13,9 @@ export default async function Work() {
     <main>
       <h1>Work</h1>
       <div className='grid gap-8 md:grid-cols-2 lg:grid-cols-3'>
-        {projects.map((project) => (
+        {/* {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
-        ))}
+        ))} */}
       </div>
     </main>
   );
