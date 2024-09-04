@@ -2,7 +2,8 @@ import { getPayloadHMR } from '@payloadcms/next/utilities'
 import config from '@payload-config'
 import { Project } from "@/payload-types";
 import Button from './components/Button';
-import Services, { Projects, ServiceCard } from './components/Services';
+import Services, { ServiceCard } from './components/ServicesSection';
+import { Projects } from './components/WorkSection';
 
 const payload = await getPayloadHMR({ config })
 
@@ -16,7 +17,7 @@ export default async function Home() {
       <div className='absolute top-0 left-0 -z-10 w-screen h-dvh bg-gradient-to-b from-indigo-3 to-indigo-1' />
 
       <section className='w-full h-[calc(100dvh-92px)] md:h-[calc(100dvh-108px)] flex flex-col md:flex-col-reverse gap-2'>
-        <div className='bg-blue-900 w-full h-full' />
+        <div className='bg-transparent w-full h-full' />
         <div className='pt-2 w-full md:w-2/3'>
           <h1 className='md:pt-16'>Focus on your business,<br />we&apos;ll dive deep into the design.</h1>
           <Button className='mt-4 md:mt-8 flex w-full' icon="ArrowRight" internalLink="/contact">Book a call</Button>

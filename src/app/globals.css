@@ -67,6 +67,9 @@ p {
 a {
   font-size: 0.875rem;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 @layer utilities {
   .text-balance {
