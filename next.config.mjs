@@ -18,6 +18,9 @@ const nextConfig = {
       },
     ],
   },
+  devIndicators: {
+    appIsrStatus: false
+  }
 }
 
 export default withPayload(nextConfig)
