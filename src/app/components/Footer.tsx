@@ -14,7 +14,6 @@ export default function Footer() {
                     <ul className="">
                         <li><Link href="/work" className="block py-2">Work</Link></li>
                         <li><Link href="/about" className="block py-2">About</Link></li>
-                        {/* <li><Link href="/blog" className="block py-2">Blog</Link></li> */}
                         <li><Link href="/contact" className="block py-2">Contact</Link></li>
                     </ul>
                 </nav>
