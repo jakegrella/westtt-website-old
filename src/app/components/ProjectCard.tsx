@@ -7,7 +7,10 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div
+    <a
+      href={project.description}
+      target='_blank'
+      rel='noopener noreferrer'
       className='relative project-card w-11/12 tall:md:w-1/3 h-full shrink-0 rounded-lg
               tall:w-auto tall:shrink tall:md:min-h-72'
     >
@@ -38,7 +41,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           </div>
         )}
       </div>
-    </div>
+    </a>
   );
 };
 
