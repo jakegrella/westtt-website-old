@@ -20,7 +20,8 @@ const nextConfig = {
   },
   devIndicators: {
     appIsrStatus: false
-  }
+  },
+  transpilePackages: ['three']
 }
 
 export default withPayload(nextConfig)

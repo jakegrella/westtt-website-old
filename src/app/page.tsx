@@ -5,6 +5,7 @@ import Button from './components/Button';
 import HorizontalOverflowContainer from './components/HorizontalOverflowContainer';
 import ProjectCard from './components/ProjectCard';
 import ServiceCard from './components/ServiceCard';
+import { LandingCanvas } from './components/LandingCanvas';
 
 const payload = await getPayloadHMR({ config });
 
@@ -43,6 +44,10 @@ export default async function Home() {
   return (
     <main className='flex flex-col items-center gap-4'>
       <div className='absolute top-0 left-0 -z-10 w-screen h-dvh bg-gradient-to-b from-indigo-3 to-indigo-1' />
+
+      <div className='absolute top-10 left-10 -z-[5]'>
+        <LandingCanvas />
+      </div>
 
       <section className='w-full h-[calc(100dvh-92px)] md:h-[calc(100dvh-108px)] flex flex-col md:flex-col-reverse gap-2'>
         <div className='bg-transparent w-full h-full' />
