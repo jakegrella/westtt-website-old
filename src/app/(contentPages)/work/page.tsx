@@ -1,8 +1,7 @@
 import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Project } from '@/payload-types';
-import HorizontalOverflowContainer from '../components/HorizontalOverflowContainer';
-import ProjectCard from '../components/ProjectCard';
+import ProjectCard from '../../components/ProjectCard';
 
 const payload = await getPayloadHMR({ config });
 
@@ -12,14 +11,13 @@ export default async function Work() {
   });
 
   return (
-    <main className='w-full h-dvh flex flex-col'>
+    <main className='h-full flex flex-col gap-2'>
       <h1>Work</h1>
-      <HorizontalOverflowContainer
-        items={projects.map((project: any) => (
+      <div className='grow flex flex-col md:flex-row gap-4'>
+        {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
-        groupItemIdentifier='project-card'
-      />
+      </div>
     </main>
   );
 }
