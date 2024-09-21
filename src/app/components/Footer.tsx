@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className='flex justify-between items-start mt-16 py-8 outline outline-[32px] outline-gray-50 bg-gray-50 text-gray-800'>
+    <footer className='w-full flex justify-between items-start pt-16 px-8 pb-8 bg-black text-foreground'>
       <Link href='/' className='flex gap-2'>
         <Image src='/logo-secondary.svg' alt='Westtt logo' width={32} height={24} />
         <h2 className='font-light text-xl'>Westtt</h2>

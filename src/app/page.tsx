@@ -2,9 +2,11 @@ import { getPayloadHMR } from '@payloadcms/next/utilities';
 import config from '@payload-config';
 import { Project } from '@/payload-types';
 import Button from './components/Button';
-import HorizontalOverflowContainer from './components/HorizontalOverflowContainer';
 import ProjectCard from './components/ProjectCard';
 import ServiceCard from './components/ServiceCard';
+// import { LandingCanvas } from './components/LandingCanvas';
+import Footer from './components/Footer';
+import Header from './components/Header';
 
 const payload = await getPayloadHMR({ config });
 
@@ -42,71 +44,53 @@ export default async function Home() {
 
   return (
     <main className='flex flex-col items-center gap-4'>
-      <div className='absolute top-0 left-0 -z-10 w-screen h-dvh bg-gradient-to-b from-indigo-3 to-indigo-1' />
+      {/* <LandingCanvas /> */}
 
-      <section className='w-full h-[calc(100dvh-92px)] md:h-[calc(100dvh-108px)] flex flex-col md:flex-col-reverse gap-2'>
-        <div className='bg-transparent w-full h-full' />
-        <div className='pt-2 w-full md:w-2/3'>
-          <h1 className='md:pt-16'>
-            Focus on your business,
-            <br />
-            we&apos;ll dive deep into the design.
-          </h1>
-          <Button className='mt-4 md:mt-8 flex w-full' icon='ArrowRight' internalLink='/contact'>
-            Book a call
-          </Button>
+      <section className='relative h-xs:h-screen w-full p-4 bg-gradient-to-b from-blue-9 to-black flex flex-col'>
+        <Header />
+        <div className='flex flex-col md:flex-col-reverse gap-2'>
+          <div className='bg-transparent w-full h-full' />
+          <div className='pt-2 w-full md:w-3/4'>
+            <h1 className='md:pt-16'>
+              Focus on your business,
+              <br />
+              we&apos;ll dive deep into the design.
+            </h1>
+            <Button className='mt-4 md:mt-8 flex w-full' icon='ArrowRight' internalLink='/contact'>
+              Book a call
+            </Button>
+          </div>
         </div>
       </section>
 
-      <div className='w-full h-[200dvh] tall:h-dvh flex flex-col gap-4'>
-        <HorizontalOverflowContainer
-          title='Services'
-          items={services.map((service: any) => (
-            <ServiceCard key={service.id} service={service} />
-          ))}
-          groupItemIdentifier='service-card'
-        />
-        <HorizontalOverflowContainer
-          title='Recent Work'
-          items={projects.map((project: any) => (
+      <section className='w-full p-4 flex flex-col gap-2'>
+        <h2>Recent Work</h2>
+        <div className='h-full flex flex-col md:flex-row gap-4'>
+          {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
-          groupItemIdentifier='project-card'
-        />
-      </div>
-
-      <section className='h-full'>
-        <h2>Pricing</h2>
-        <p>Choose between two simple options: pay monthly or all at once</p>
-        <div className='flex flex-col gap-4 justify-center h-full mt-2 md:flex-row'>
-          <ServiceCard
-            service={{
-              id: 3,
-              title: 'Ongoing',
-              subtitle: '$0 down, $99/mo, 6 month minimum contract',
-              description: [
-                'Unlimited edits',
-                'Includes hosting',
-                '24/7 support',
-                'Lifetime updates',
-              ],
-            }}
-            type='secondary'
-          />
-          <ServiceCard
-            service={{
-              id: 4,
-              title: 'Upfront',
-              subtitle: '$1,750 one time',
-              description: ['$25/mo hosting', '$50/hr site edits'],
-            }}
-            type='secondary'
-          />
         </div>
+      </section>
+
+      <section className='w-full p-4'>
+        <h2>Services</h2>
+        <div className='h-full flex flex-col md:flex-row gap-4'>
+          {services.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+          ))}
+        </div>
+      </section>
+
+      <div className='w-full flex flex-col p-4'>
+        <h2>We really care</h2>
+        <p>Our mission at Westtt is to elevate brands through great design.</p>
+        <p></p>
         <Button className='mt-4 md:mt-8 flex w-full' icon='ArrowRight' internalLink='/contact'>
           Book a call
         </Button>
-      </section>
+      </div>
+
+      <Footer />
     </main>
   );
 }

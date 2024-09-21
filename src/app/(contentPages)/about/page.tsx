@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <main className='h-screen'>
+    <main className='h-full flex flex-col gap-2'>
       <h1>About</h1>
       <div className='max-w-xl flex flex-col gap-2'>
         <p>
