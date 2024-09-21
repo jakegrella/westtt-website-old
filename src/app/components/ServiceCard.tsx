@@ -12,7 +12,7 @@ type ServiceCardProps = {
 const ServiceCard = ({ service, type = 'primary', className }: ServiceCardProps) => {
   return (
     <div
-      className={`relative service-card min-h-64 flex flex-col justify-between rounded-lg
+      className={`relative service-card min-h-64 flex flex-col justify-between rounded-lg px-4 py-2
         ${type === 'primary' ? 'bg-card-blue-10' : 'bg-gray-50 text-gray-800'}
         ${className || ''}
       `}
