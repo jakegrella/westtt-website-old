@@ -1,12 +1,6 @@
 import type { Metadata } from 'next';
-import { Averia_Serif_Libre } from 'next/font/google'
-import './globals.css';
+import './styles/globals.css';
 import { ReactLenis } from './libs/lenis';
-
-export const asl = Averia_Serif_Libre({
-  weight: '400',
-  subsets: ['latin'],
-})
 
 export const metadata: Metadata = {
   title: 'Westtt',

@@ -7,7 +7,7 @@ import ServiceCard from './components/ServiceCard';
 // import { LandingCanvas } from './components/LandingCanvas';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { asl } from './layout';
+import { asl } from './styles/fonts';
 
 const payload = await getPayloadHMR({ config });
 
