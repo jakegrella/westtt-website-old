@@ -7,6 +7,7 @@ import ServiceCard from './components/ServiceCard';
 // import { LandingCanvas } from './components/LandingCanvas';
 import Footer from './components/Footer';
 import Header from './components/Header';
+import { asl } from './layout';
 
 const payload = await getPayloadHMR({ config });
 
@@ -83,7 +84,7 @@ export default async function Home() {
 
       <div className='w-full flex flex-col p-4'>
         <h2>We really care</h2>
-        <p>Our mission at Westtt is to elevate brands through great design.</p>
+        <p className={`${asl.className} text-4xl md:text-6xl text-slate-11 leading-none py-8 md:py-16`}>Our mission at Westtt is to elevate brands through great design.</p>
         <p></p>
         <Button className='mt-4 md:mt-8 flex w-full' icon='ArrowRight' internalLink='/contact'>
           Book a call
